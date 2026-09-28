@@ -10,11 +10,17 @@ CallMind remembers every meeting with a contact and gives the rep a synthesized 
 
 ## Setup
 
-```bash
 pip install -r requirements.txt
-export GROQ_API_KEY=your-groq-key      # free tier: https://groq.com
+
+Get a Hindsight Cloud API key at https://ui.hindsight.vectorize.io (Connect, then Create API Key), then:
+
+Windows (PowerShell):
+$env:HINDSIGHT_API_KEY="your-key-here"
+
+Mac/Linux:
+export HINDSIGHT_API_KEY=your-key-here
+
 python agent.py
-```
 
 (To use Hindsight Cloud instead of the embedded server — including the `MEMHACK99` promo credits — see the commented-out block in `get_client()` in `agent.py`.)
 
